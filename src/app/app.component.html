@@ -1,0 +1,17 @@
+<p>Angular FormArray Example </p>
+
+<form [formGroup]="formPadre">
+
+
+  <mat-form-field appearance="outline">
+    <mat-label>Número de Póliza:</mat-label>
+    <input id="poliza" matInput formControlName="poliza">
+  </mat-form-field>
+
+  <hr>
+  <app-asegurados formControlName="asegurados"></app-asegurados>
+  <hr>
+  <button mat-raised-button type="submit" [disabled]="formPadre.invalid" color="primary">Guardar </button>
+</form>
+ <span> {{this.formPadre.value | json}} </span>
+ 
